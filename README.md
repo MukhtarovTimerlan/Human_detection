@@ -12,8 +12,8 @@
 
 ```bash
 # Клонирование репозитория
-git clone [url репозитория]
-cd [название репозитория]
+git clone https://github.com/MukhtarovTimerlan/Human_detection.git
+cd Human_detection
 
 # Установка зависимостей
 pip install -r requirements.txt
@@ -24,8 +24,16 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-
 После запуска приложение будет доступно по адресу http://localhost:8501 в вашем веб-браузере.
+
+
+### Запуск обучения
+```bash
+python install_wider_person.py
+python dataset_convertion.py
+```
+В интерактивном режиме `train.ipynb`
+
 
 ## Структура проекта
 
@@ -40,7 +48,6 @@ streamlit run app.py
 - `model_widerperson_raw.ipynb` - проверка метрик модели без дообучения  
 - `fast_check_yolo.ipynb` - проверка работоспособности модели на случайном видео  
 - `yolov8n.pt` - базовые веса модели из коробки  
-- `yolov8n.onnx` - базовые веса модели из коробки в оптимизированном для CPU виде. (Для запуска `fast_check_yolo.ipynb`)  
 - `widerperson_yolo.yaml` - конфиг для обучения модели
 
 ## Технические детали
